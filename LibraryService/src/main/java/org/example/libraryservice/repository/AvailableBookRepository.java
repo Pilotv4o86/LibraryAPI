@@ -2,10 +2,12 @@ package org.example.libraryservice.repository;
 
 import org.example.libraryservice.model.AvailableBook;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface AvailableBookRepository extends JpaRepository<AvailableBook, Long>
+@Repository
+public interface AvailableBookRepository extends JpaRepository<AvailableBook, Integer>
 {
-    List<AvailableBook> findAvailableBooks();
+    List<AvailableBook> findAllByIsAvailableTrue();
 }

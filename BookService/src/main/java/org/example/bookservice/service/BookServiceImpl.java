@@ -1,11 +1,11 @@
 package org.example.bookservice.service;
 
 import lombok.AllArgsConstructor;
+import org.example.bookservice.client.LibraryClient;
 import org.example.bookservice.model.Book;
 import org.example.bookservice.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -13,9 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class BookServiceImpl implements BookService
 {
-
-    @Autowired
-    private RestTemplate restTemplate;
+    private LibraryClient libraryClient;
     @Autowired
     private BookRepository bookRepository;
     @Override
@@ -31,8 +29,7 @@ public class BookServiceImpl implements BookService
     @Override
     public Book save(Book book) {
         Book savedBook = bookRepository.save(book);
-        String libraryServiceUrl = "http://localhost:8081/library/add-book";
-        restTemplate.postForObject(libraryServiceUrl, savedBook.getId(), Void.class);
+        libraryClient.addBook(savedBook.getId());
 
         return savedBook;
     }

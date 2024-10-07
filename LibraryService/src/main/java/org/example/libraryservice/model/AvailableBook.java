@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -18,9 +18,9 @@ public class AvailableBook
     @Id
     @GeneratedValue
     private Integer id;
-    private Long bookId;
-    private LocalDateTime borrowedAt;
-    private LocalDateTime returnedAt;
+    private Integer bookId;
+    private LocalDate borrowedAt;
+    private LocalDate returnedAt;
     boolean isAvailable;
     public AvailableBook(){}
 }

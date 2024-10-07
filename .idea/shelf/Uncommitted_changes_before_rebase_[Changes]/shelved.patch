@@ -1,0 +1,211 @@
+Index: LibraryService/src/main/java/org/example/libraryservice/client/BookClient.java
+===================================================================
+diff --git a/LibraryService/src/main/java/org/example/libraryservice/client/BookClient.java b/LibraryService/src/main/java/org/example/libraryservice/client/BookClient.java
+deleted file mode 100644
+--- a/LibraryService/src/main/java/org/example/libraryservice/client/BookClient.java	(revision 6b7f5cfb89a4cd0dc8298b99b92cd2d193f047c2)
++++ /dev/null	(revision 6b7f5cfb89a4cd0dc8298b99b92cd2d193f047c2)
+@@ -1,9 +0,0 @@
+-package org.example.libraryservice.client;
+-
+-import org.springframework.cloud.netflix.feign.FeignClient;
+-
+-
+-public interface BookClient
+-{
+-
+-}
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Encoding\">\r\n    <file url=\"file://$PROJECT_DIR$/BookService/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/LibraryService/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/src/main/resources\" charset=\"UTF-8\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+--- a/.idea/encodings.xml	(revision 6b7f5cfb89a4cd0dc8298b99b92cd2d193f047c2)
++++ b/.idea/encodings.xml	(date 1728319544985)
+@@ -2,6 +2,7 @@
+ <project version="4">
+   <component name="Encoding">
+     <file url="file://$PROJECT_DIR$/BookService/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/EurikaServer/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/LibraryService/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"dataSourceStorageLocal\" created-in=\"IU-241.18034.62\">\r\n    <data-source name=\"books_db@localhost\" uuid=\"b8c476a8-6f10-441b-b3d3-c4f93b647aa0\">\r\n      <database-info product=\"MySQL\" version=\"8.0.39\" jdbc-version=\"4.2\" driver-name=\"MySQL Connector/J\" driver-version=\"mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)\" dbms=\"MYSQL\" exact-version=\"8.0.39\" exact-driver-version=\"8.2\">\r\n        <extra-name-characters>#@</extra-name-characters>\r\n        <identifier-quote-string>`</identifier-quote-string>\r\n      </database-info>\r\n      <case-sensitivity plain-identifiers=\"lower\" quoted-identifiers=\"lower\" />\r\n      <secret-storage>master_key</secret-storage>\r\n      <user-name>root</user-name>\r\n      <schema-mapping>\r\n        <introspection-scope>\r\n          <node kind=\"schema\" qname=\"@\" />\r\n        </introspection-scope>\r\n      </schema-mapping>\r\n    </data-source>\r\n    <data-source name=\"available_books_db@localhost\" uuid=\"170fcd89-821f-4dce-9998-c84b01ded1ad\">\r\n      <database-info product=\"MySQL\" version=\"8.0.39\" jdbc-version=\"4.2\" driver-name=\"MySQL Connector/J\" driver-version=\"mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)\" dbms=\"MYSQL\" exact-version=\"8.0.39\" exact-driver-version=\"8.2\">\r\n        <extra-name-characters>#@</extra-name-characters>\r\n        <identifier-quote-string>`</identifier-quote-string>\r\n      </database-info>\r\n      <case-sensitivity plain-identifiers=\"lower\" quoted-identifiers=\"lower\" />\r\n      <secret-storage>master_key</secret-storage>\r\n      <user-name>root</user-name>\r\n      <schema-mapping>\r\n        <introspection-scope>\r\n          <node kind=\"schema\" qname=\"@\" />\r\n        </introspection-scope>\r\n      </schema-mapping>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+--- a/.idea/dataSources.local.xml	(revision 6b7f5cfb89a4cd0dc8298b99b92cd2d193f047c2)
++++ b/.idea/dataSources.local.xml	(date 1728319544986)
+@@ -5,6 +5,7 @@
+       <database-info product="MySQL" version="8.0.39" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.39" exact-driver-version="8.2">
+         <extra-name-characters>#@</extra-name-characters>
+         <identifier-quote-string>`</identifier-quote-string>
++        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
+       </database-info>
+       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+       <secret-storage>master_key</secret-storage>
+@@ -19,6 +20,7 @@
+       <database-info product="MySQL" version="8.0.39" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.39" exact-driver-version="8.2">
+         <extra-name-characters>#@</extra-name-characters>
+         <identifier-quote-string>`</identifier-quote-string>
++        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
+       </database-info>
+       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+       <secret-storage>master_key</secret-storage>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/BookService/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/LibraryService/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_21\" default=\"true\" project-jdk-name=\"21\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 6b7f5cfb89a4cd0dc8298b99b92cd2d193f047c2)
++++ b/.idea/misc.xml	(date 1728319544952)
+@@ -1,11 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="MavenProjectsManager">
+     <option name="originalFiles">
+       <list>
+         <option value="$PROJECT_DIR$/pom.xml" />
+         <option value="$PROJECT_DIR$/BookService/pom.xml" />
+         <option value="$PROJECT_DIR$/LibraryService/pom.xml" />
++        <option value="$PROJECT_DIR$/EurikaServer/pom.xml" />
+       </list>
+     </option>
+   </component>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"8b3b7c65-0606-4bda-8f6d-3cdb41dbfc40\" name=\"Changes\" comment=\"CRUD operation on book\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/config/BookServiceConfig.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/client/BookClient.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/controller/LibraryController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/dto/BookUpdateRequest.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/model/AvailableBook.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/repository/AvailableBookRepository.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/service/LibraryService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources.local.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources.local.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad/storage_v2/_src_/schema/free_books_db.pupzEQ.meta\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad/storage_v2/_src_/schema/free_books_db.pupzEQ.meta\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/encodings.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookServiceImpl.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookServiceImpl.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"dev\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 2\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2n0aBev0UikNYqWeBrGQDg8tp1O\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"JUnit.LibraryServiceApplicationTests.executor\": \"Run\",\r\n    \"Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor\": \"Run\",\r\n    \"Maven.BookService [clean].executor\": \"Run\",\r\n    \"Maven.BookService [package].executor\": \"Run\",\r\n    \"Maven.LibraryService [package].executor\": \"Run\",\r\n    \"RequestMappingsPanelOrder0\": \"0\",\r\n    \"RequestMappingsPanelOrder1\": \"1\",\r\n    \"RequestMappingsPanelWidth0\": \"75\",\r\n    \"RequestMappingsPanelWidth1\": \"75\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"Spring Boot.BookServiceApplication.executor\": \"Run\",\r\n    \"git-widget-placeholder\": \"LibraryService\",\r\n    \"jdk.selected.JAVA_MODULE\": \"21\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"F:/Labs/Repos/Library\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.repository.indices\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"mysql\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\"Spring Boot.BookServiceApplication\">\r\n    <configuration name=\"LibraryServiceApplicationTests\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"LibraryService\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.example.libraryservice.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"org.example.libraryservice\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.libraryservice.LibraryServiceApplicationTests\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"BookServiceApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <option name=\"FRAME_DEACTIVATION_UPDATE_POLICY\" value=\"UpdateClassesAndResources\" />\r\n      <module name=\"BookService\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"org.example.bookservice.BookServiceApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"LibraryServiceApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <option name=\"FRAME_DEACTIVATION_UPDATE_POLICY\" value=\"UpdateClassesAndResources\" />\r\n      <module name=\"LibraryService\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"org.example.libraryservice.LibraryServiceApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.LibraryServiceApplicationTests\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62\" />\r\n        <option value=\"bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"8b3b7c65-0606-4bda-8f6d-3cdb41dbfc40\" name=\"Changes\" comment=\"\" />\r\n      <created>1728112313460</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1728112313460</updated>\r\n      <workItem from=\"1728112314590\" duration=\"5838000\" />\r\n      <workItem from=\"1728307808332\" duration=\"72000\" />\r\n      <workItem from=\"1728307893941\" duration=\"34000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Init commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728112873810</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728112873810</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Init commit\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Init commit\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6b7f5cfb89a4cd0dc8298b99b92cd2d193f047c2)
++++ b/.idea/workspace.xml	(date 1728319566661)
+@@ -4,29 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8b3b7c65-0606-4bda-8f6d-3cdb41dbfc40" name="Changes" comment="CRUD operation on book">
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/config/BookServiceConfig.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/client/BookClient.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/controller/LibraryController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/dto/BookUpdateRequest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/model/AvailableBook.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/repository/AvailableBookRepository.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/service/LibraryService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad/storage_v2/_src_/schema/free_books_db.pupzEQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad/storage_v2/_src_/schema/free_books_db.pupzEQ.meta" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookServiceImpl.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+-    </list>
++    <list default="true" id="8b3b7c65-0606-4bda-8f6d-3cdb41dbfc40" name="Changes" comment="CRUD operation on book" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -72,6 +50,7 @@
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "Spring Boot.BookServiceApplication.executor": "Run",
++    "Spring Boot.EurikaServerApplication.executor": "Run",
+     "git-widget-placeholder": "LibraryService",
+     "jdk.selected.JAVA_MODULE": "21",
+     "kotlin-language-version-configured": "true",
+@@ -81,6 +60,7 @@
+     "node.js.selected.package.eslint": "(autodetect)",
+     "node.js.selected.package.tslint": "(autodetect)",
+     "nodejs_package_manager_path": "npm",
++    "run.configurations.included.in.services": "true",
+     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+     "vue.rearranger.settings.migration": "true"
+   },
+@@ -90,7 +70,19 @@
+     ]
+   }
+ }]]></component>
+-  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
++  <component name="ReactorSettings">
++    <option name="notificationShown" value="true" />
++  </component>
++  <component name="RunDashboard">
++    <option name="configurationTypes">
++      <set>
++        <option value="MicronautRunConfigurationType" />
++        <option value="QuarkusRunConfigurationType" />
++        <option value="SpringBootApplicationConfigurationType" />
++      </set>
++    </option>
++  </component>
++  <component name="RunManager" selected="Spring Boot.LibraryServiceApplication">
+     <configuration name="LibraryServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="LibraryService" />
+       <extension name="coverage">
+@@ -110,6 +102,13 @@
+       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+       <module name="BookService" />
+       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.bookservice.BookServiceApplication" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="EurikaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
++      <module name="EurikaServer" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.eurikaserver.EurikaServerApplication" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -156,7 +155,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1728112873810</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="Configured microservices communication">
++      <option name="closed" value="true" />
++      <created>1728319380170</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1728319380170</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Configured microservices communication">
++      <option name="closed" value="true" />
++      <created>1728319406584</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1728319406584</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -164,6 +179,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Init commit" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Init commit" />
++    <MESSAGE value="Configured microservices communication" />
++    <option name="LAST_COMMIT_MESSAGE" value="Configured microservices communication" />
+   </component>
+ </project>
+\ No newline at end of file

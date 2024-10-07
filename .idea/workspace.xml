@@ -5,27 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b3b7c65-0606-4bda-8f6d-3cdb41dbfc40" name="Changes" comment="CRUD operation on book">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/config/BookServiceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/client/BookClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/controller/LibraryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/dto/BookUpdateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/model/AvailableBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/repository/AvailableBookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/service/LibraryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/client/LibraryClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/model/BookUpdateRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad/storage_v2/_src_/schema/free_books_db.pupzEQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/170fcd89-821f-4dce-9998-c84b01ded1ad/storage_v2/_src_/schema/free_books_db.pupzEQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/BookServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/BookServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/config/BookServiceConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/client/BookClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/controller/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/controller/LibraryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/dto/BookUpdateRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/model/AvailableBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/model/AvailableBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/service/LibraryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/service/LibraryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -72,6 +66,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.BookServiceApplication.executor": "Run",
+    "Spring Boot.EurikaServerApplication.executor": "Run",
+    "Spring Boot.LibraryServiceApplication.executor": "Run",
     "git-widget-placeholder": "LibraryService",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
@@ -81,6 +77,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   },
@@ -90,7 +87,19 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.LibraryServiceApplication">
     <configuration name="LibraryServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibraryService" />
       <extension name="coverage">
@@ -110,6 +119,13 @@
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="BookService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.bookservice.BookServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurikaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="EurikaServer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.eurikaserver.EurikaServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,7 +172,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728112873810</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Configured microservices communication">
+      <option name="closed" value="true" />
+      <created>1728319380170</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728319380170</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Configured microservices communication">
+      <option name="closed" value="true" />
+      <created>1728319406584</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728319406584</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +196,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init commit" />
+    <MESSAGE value="Configured microservices communication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configured microservices communication" />
   </component>
 </project>
