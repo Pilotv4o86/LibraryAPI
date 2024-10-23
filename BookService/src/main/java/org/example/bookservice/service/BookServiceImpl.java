@@ -5,28 +5,35 @@ import org.example.bookservice.client.LibraryClient;
 import org.example.bookservice.model.Book;
 import org.example.bookservice.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Service;
+import lombok.AllArgsConstructor;
+
 @Service
 @AllArgsConstructor
-public class BookServiceImpl implements BookService
-{
-    private LibraryClient libraryClient;
-    @Autowired
-    private BookRepository bookRepository;
+public class BookServiceImpl implements BookService {
+
+    private final LibraryClient libraryClient;
+    private final BookRepository bookRepository;
+
     @Override
     public List<Book> getBooks() {
         return bookRepository.findAll();
     }
 
     @Override
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public Book getById(Integer id) {
         return bookRepository.getReferenceById(id);
     }
 
     @Override
+    @PreAuthorize("hasRole('ADMIN')")
     public Book save(Book book) {
         Book savedBook = bookRepository.save(book);
         libraryClient.addBook(savedBook.getId());
@@ -35,8 +42,9 @@ public class BookServiceImpl implements BookService
     }
 
     @Override
+    @PreAuthorize("hasRole('ADMIN')")
     public Book update(Integer id, Book book) {
-       Book oldBook = bookRepository.getReferenceById(id);
+        Book oldBook = bookRepository.getReferenceById(id);
         if (book.getIsbn() != null) {
             oldBook.setIsbn(book.getIsbn());
         }
@@ -53,13 +61,13 @@ public class BookServiceImpl implements BookService
             oldBook.setAuthor(book.getAuthor());
         }
         return bookRepository.save(oldBook);
-
     }
 
     @Override
+    @PreAuthorize("hasRole('ADMIN')")
     public void delete(Integer id) {
         bookRepository.deleteById(id);
     }
-
-
 }
+
+

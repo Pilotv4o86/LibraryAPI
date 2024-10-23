@@ -3,6 +3,8 @@ package org.example.bookservice.controller;
 import lombok.AllArgsConstructor;
 import org.example.bookservice.model.Book;
 import org.example.bookservice.service.BookService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,28 +14,32 @@ import java.util.List;
 @RequestMapping("/books")
 public class BookController
 {
-
     private BookService bookService;
 
     @PostMapping("/create")
-    public Book create(@RequestBody Book book)
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<Book> create(@RequestBody Book book)
     {
-        return bookService.save(book);
+        return ResponseEntity.ok(bookService.save(book));
     }
 
     @GetMapping("/list")
-    public List<Book> findAll()
+    @PreAuthorize("hasRole('USER') || hasRole('ADMIN')")
+    public ResponseEntity<List<Book>> findAll()
     {
-        return bookService.getBooks();
+        return ResponseEntity.ok(bookService.getBooks());
     }
 
+
     @PatchMapping("/{id}/update")
-    public Book update(@RequestBody Book book, @PathVariable Integer id)
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<Book> update(@RequestBody Book book, @PathVariable Integer id)
     {
-        return bookService.update(id, book);
+        return ResponseEntity.ok(bookService.update(id, book));
     }
     @DeleteMapping("/{id}/delete")
-    public void detele(@PathVariable Integer id)
+    @PreAuthorize("hasRole('ADMIN')")
+    public void delete(@PathVariable Integer id)
     {
         bookService.delete(id);
     }
