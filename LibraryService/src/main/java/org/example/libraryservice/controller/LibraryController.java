@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import org.example.libraryservice.model.BookUpdateRequest;
 import org.example.libraryservice.model.AvailableBook;
 import org.example.libraryservice.service.LibraryService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.relational.core.sql.In;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

@@ -4,15 +4,10 @@ import lombok.AllArgsConstructor;
 import org.example.bookservice.client.LibraryClient;
 import org.example.bookservice.model.Book;
 import org.example.bookservice.repository.BookRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Service;
-import lombok.AllArgsConstructor;
 
 @Service
 @AllArgsConstructor

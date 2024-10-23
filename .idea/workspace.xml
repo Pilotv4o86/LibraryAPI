@@ -4,33 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b3b7c65-0606-4bda-8f6d-3cdb41dbfc40" name="Changes" comment="Configured microservices communication">
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/security/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/config/FeignClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/security/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookService/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/security/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/pom.xml" afterDir="false" />
+    <list default="true" id="8b3b7c65-0606-4bda-8f6d-3cdb41dbfc40" name="Changes" comment="Configured authentication via bearer token">
+      <change beforePath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/client/LibraryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/client/LibraryClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookService/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EurikaServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/EurikaServer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/controller/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/controller/LibraryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/security/JwtUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +225,7 @@
       <workItem from="1729580631569" duration="2594000" />
       <workItem from="1729588290046" duration="1008000" />
       <workItem from="1729591569217" duration="3047000" />
-      <workItem from="1729661964415" duration="3411000" />
+      <workItem from="1729661964415" duration="3814000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -271,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728319406584</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Configured authentication via bearer token">
+      <option name="closed" value="true" />
+      <created>1729668115123</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729668115123</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +268,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="Configured microservices communication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configured microservices communication" />
+    <MESSAGE value="Configured authentication via bearer token" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configured authentication via bearer token" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Library$BookServiceApplication.ic" NAME="BookServiceApplication Coverage Results" MODIFIED="1729505013994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
