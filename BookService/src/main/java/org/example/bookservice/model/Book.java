@@ -1,14 +1,15 @@
 package org.example.bookservice.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 @Data
 @Entity
 @Table(name = "books")
+@NoArgsConstructor
 public class Book implements Serializable
 {
     @Id
@@ -19,7 +20,4 @@ public class Book implements Serializable
     private String genre;
     private String description;
     private String author;
-
-    public Book()
-    {}
 }

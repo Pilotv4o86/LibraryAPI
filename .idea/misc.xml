@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/EurikaServer/pom.xml" />
         <option value="$PROJECT_DIR$/AuthService/pom.xml" />
         <option value="$PROJECT_DIR$/Jwt-library/pom.xml" />
+        <option value="$PROJECT_DIR$/EurekaServer/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

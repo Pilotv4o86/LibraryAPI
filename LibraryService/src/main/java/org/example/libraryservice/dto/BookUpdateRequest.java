@@ -1,4 +1,4 @@
-package org.example.libraryservice.model;
+package org.example.libraryservice.dto;
 
 import lombok.Data;
 

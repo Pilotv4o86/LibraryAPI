@@ -1,49 +1,84 @@
 package org.example.libraryservice.service;
 
+import lombok.AllArgsConstructor;
+import org.example.libraryservice.dto.AvailableBookDto;
+import org.example.libraryservice.exceptions.BookIsTakenException;
+import org.example.libraryservice.exceptions.BookNotFoundException;
+import org.example.libraryservice.exceptions.InvalidBorrowedTimeException;
+import org.example.libraryservice.mapper.AvailableBookMapper;
 import org.example.libraryservice.model.AvailableBook;
+import org.example.libraryservice.dto.BookUpdateRequest;
 import org.example.libraryservice.repository.AvailableBookRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.rest.webmvc.ResourceNotFoundException;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Service
-public class LibraryService {
-
-    @Autowired
+@Transactional
+@AllArgsConstructor
+public class LibraryService
+{
     private AvailableBookRepository availableBookRepository;
+    private AvailableBookMapper availableBookMapper;
 
-
-    public List<AvailableBook> getAllBooks()
+    public List<AvailableBookDto> getAllBooks(Integer page,
+                                              Integer size)
     {
-        return availableBookRepository.findAll();
+        return availableBookRepository.findAll(PageRequest.of(page, size)).
+                getContent()
+                .stream()
+                .map(availableBookMapper::toBookDto)
+                .toList();
     }
 
-    // Добавить книгу в список доступных книг
-    public AvailableBook addAvailableBook(Integer bookId) {
+    public AvailableBookDto addAvailableBook(Integer bookId) {
         AvailableBook availableBook = new AvailableBook();
         availableBook.setBookId(bookId);
         availableBook.setAvailable(true);
-        return availableBookRepository.save(availableBook);
+        return availableBookMapper.toBookDto(availableBookRepository.save(availableBook));
     }
 
-    // Обновить информацию о книге (например, когда её взяли или вернули)
-    public AvailableBook updateBookInfo(Integer bookId, LocalDate borrowedAt, LocalDate returnAt) {
+    public AvailableBookDto updateBookInfo(Integer bookId,
+                                           BookUpdateRequest bookUpdateRequest)
+    {
+
         AvailableBook availableBook = availableBookRepository.findById(bookId)
-                .orElseThrow(() -> new ResourceNotFoundException("Book not found") );
+                .orElseThrow(() -> new BookNotFoundException("Book not found with ID " + bookId));
 
-        availableBook.setAvailable((borrowedAt == null && returnAt == null));  // Книга стала недоступной
-        availableBook.setBorrowedAt(borrowedAt);
-        availableBook.setReturnedAt(returnAt);
+        if ((bookUpdateRequest.getBorrowedAt() != null &&
+                bookUpdateRequest.getReturnAt() != null)) {
+            if (bookUpdateRequest.getBorrowedAt().isAfter(bookUpdateRequest.getReturnAt())) {
+                throw new InvalidBorrowedTimeException("Borrowed at before available book");
+            }
+        }
+
+        availableBook.setAvailable((bookUpdateRequest.getBorrowedAt() == null &&
+                bookUpdateRequest.getReturnAt() == null));
+        availableBook.setBorrowedAt(bookUpdateRequest.getBorrowedAt());
+        availableBook.setReturnedAt(bookUpdateRequest.getReturnAt());
 
 
-        return availableBookRepository.save(availableBook);
+        return availableBookMapper.toBookDto(availableBookRepository.save(availableBook));
     }
 
-    // Получить список всех доступных книг
-    public List<AvailableBook> getAvailableBooks() {
-        return availableBookRepository.findAllByIsAvailableTrue();
+    public List<AvailableBookDto> getAvailableBooks(Integer page, Integer size) {
+        return  availableBookRepository.findAllByIsAvailableTrue(PageRequest.of(page,size))
+                .get()
+                .stream()
+                .map(availableBookMapper::toBookDto)
+                .toList();
+    }
+
+    public void deleteBookById(Integer bookId)
+    {
+        AvailableBook availableBook = availableBookRepository.findByBookId(bookId).orElseThrow(() ->
+                new BookNotFoundException("Book not found with ID " + bookId));
+        if (!availableBook.isAvailable())
+        {
+            throw new BookIsTakenException("Book is taken with ID " + bookId);
+        }
+        availableBookRepository.deleteById(availableBook.getId());
     }
 }

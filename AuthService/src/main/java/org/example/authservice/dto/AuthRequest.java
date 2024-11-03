@@ -1,9 +1,10 @@
-package org.example.authservice.model;
+package org.example.authservice.dto;
 
 import lombok.Data;
 
 @Data
-public class AuthRequest {
+public class AuthRequest
+{
     private String username;
     private String password;
 }

@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
@@ -13,6 +14,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "available_books")
 @AllArgsConstructor
+@NoArgsConstructor
 public class AvailableBook
 {
     @Id
@@ -22,5 +24,4 @@ public class AvailableBook
     private LocalDate borrowedAt;
     private LocalDate returnedAt;
     boolean isAvailable;
-    public AvailableBook(){}
 }

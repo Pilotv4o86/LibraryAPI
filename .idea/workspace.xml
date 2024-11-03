@@ -4,7 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b3b7c65-0606-4bda-8f6d-3cdb41dbfc40" name="Changes" comment="Minor refactoring" />
+    <list default="true" id="8b3b7c65-0606-4bda-8f6d-3cdb41dbfc40" name="Changes" comment="Minor refactoring">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/dto/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/dto/AvailableBookDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/dto/BookDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/dto/BookUpdateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/exceptions/BookIsTakenException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/exceptions/BookNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/exceptions/BookServiceHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/exceptions/DuplicateIsbnException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/exceptions/FeignExceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/exceptions/InvalidBookException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/mapper/BookMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/LibraryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/dto/AvailableBookDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/exceptions/BookIsTakenException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/exceptions/BookNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/exceptions/InvalidBorrowedTimeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/exceptions/LibraryExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/mapper/AvailableBookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/model/AuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/dto/AuthRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/main/java/org/example/authservice/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/client/LibraryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/client/LibraryClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/config/FeignClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/config/FeignClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/service/BookServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookService/src/test/java/org/example/bookservice/BookServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookService/src/test/java/org/example/bookservice/BookServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurikaServer/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurikaServer/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurikaServer/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurikaServer/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurikaServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurikaServer/src/main/java/org/example/eurikaserver/EurikaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/src/main/java/org/example/eurikaserver/EurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurikaServer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EurikaServer/src/test/java/org/example/eurikaserver/EurikaServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/EurekaServer/src/test/java/org/example/eurikaserver/EurekaServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/controller/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/controller/LibraryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/model/AvailableBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/model/AvailableBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/model/BookUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/dto/BookUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/repository/AvailableBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/repository/AvailableBookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/security/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/service/LibraryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/service/LibraryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryService/src/test/java/org/example/libraryservice/LibraryServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryService/src/test/java/org/example/libraryservice/LibraryServiceApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +75,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +96,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "HTTP Request.generated-requests | #5.executor": "Run",
+    "JUnit.BookServiceApplicationTests.executor": "Run",
+    "JUnit.BookServiceApplicationTests.testCreateBook_WithDuplicateIsbn.executor": "Debug",
+    "JUnit.BookServiceApplicationTests.testCreateBook_WithValidData.executor": "Debug",
+    "JUnit.BookServiceApplicationTests.testUpdate_Success.executor": "Run",
+    "JUnit.BookServiceTest.executor": "Run",
     "JUnit.LibraryServiceApplicationTests.executor": "Run",
+    "JUnit.LibraryServiceApplicationTests.testDeleteBookById_Success.executor": "Run",
+    "JUnit.LibraryServiceApplicationTests.testUpdateBookInfo.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.AuthService [clean].executor": "Run",
     "Maven.AuthService [deploy].executor": "Run",
@@ -58,13 +121,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.AuthServiceApplication (1).executor": "Run",
     "Spring Boot.AuthServiceApplication.executor": "Run",
-    "Spring Boot.BookServiceApplication.executor": "Run",
+    "Spring Boot.BookServiceApplication.executor": "Debug",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.EurikaServerApplication.executor": "Run",
     "Spring Boot.LibraryServiceApplication.executor": "Run",
-    "git-widget-placeholder": "TokenAuth",
+    "git-widget-placeholder": "hotfix",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/Labs/Repos/Library/LibraryService/src/main/java/org/example/libraryservice/security",
+    "last_opened_file_path": "F:/Labs/Repos/Library/AuthService/src/main/java/org/example/authservice/security",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,17 +151,22 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.bookservice.exceptions" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Labs\Repos\Library\LibraryService\src\main\java\org\example\libraryservice\security" />
+      <recent name="F:\Labs\Repos\Library\AuthService\src\main\java\org\example\authservice\security" />
       <recent name="F:\Labs\Repos\Library\BookService\src\main\java\org\example\bookservice\security" />
+      <recent name="F:\Labs\Repos\Library\LibraryService\src\main\java\org\example\libraryservice\security" />
+      <recent name="F:\Labs\Repos\Library\LibraryService\src\main\java\org\example\libraryservice" />
       <recent name="F:\Labs\Repos\Library\AuthService\src\main\java\org\example\authservice\service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.bookservice.exceptions" />
+      <recent name="org.example.libraryservice.exceptions" />
+      <recent name="org.example.bookservice.dto" />
       <recent name="org.example.authservice.security" />
       <recent name="org.example.bookservice.security" />
-      <recent name="org.example.libraryservice.security" />
-      <recent name="org.example.libraryservice.config" />
-      <recent name="org.example.authservice.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -106,77 +175,108 @@
         <option value="MicronautRunConfigurationType" />
         <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
+        <option value="TestNG" />
+      </set>
+    </option>
+    <option name="excludedTypes">
+      <set>
+        <option value="HttpClient.HttpRequestRunConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
-    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="AuthService" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.authservice.AuthServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.authservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+  <component name="RunManager" selected="JUnit.LibraryServiceApplicationTests.testDeleteBookById_Success">
+    <configuration name="BookServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookService" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.bookservice.BookServiceApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.bookservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.example.bookservice" />
+      <option name="MAIN_CLASS_NAME" value="org.example.bookservice.BookServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurikaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="EurikaServer" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.eurikaserver.EurikaServerApplication" />
+    <configuration name="BookServiceApplicationTests.testUpdate_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.eurikaserver.*" />
+          <option name="PATTERN" value="org.example.bookservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.example.bookservice" />
+      <option name="MAIN_CLASS_NAME" value="org.example.bookservice.BookServiceApplicationTests" />
+      <option name="METHOD_NAME" value="testUpdate_Success" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+    <configuration name="LibraryServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibraryService" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.libraryservice.LibraryServiceApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.libraryservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.example.libraryservice" />
+      <option name="MAIN_CLASS_NAME" value="org.example.libraryservice.LibraryServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryServiceApplicationTests.testDeleteBookById_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibraryService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.libraryservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.libraryservice" />
+      <option name="MAIN_CLASS_NAME" value="org.example.libraryservice.LibraryServiceApplicationTests" />
+      <option name="METHOD_NAME" value="testDeleteBookById_Success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryServiceApplicationTests.testUpdateBookInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibraryService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.libraryservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.libraryservice" />
+      <option name="MAIN_CLASS_NAME" value="org.example.libraryservice.LibraryServiceApplicationTests" />
+      <option name="METHOD_NAME" value="testUpdateBookInfo" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.BookServiceApplication" />
-      <item itemvalue="Spring Boot.EurikaServerApplication" />
-      <item itemvalue="Spring Boot.LibraryServiceApplication" />
-      <item itemvalue="Spring Boot.AuthServiceApplication" />
+      <item itemvalue="JUnit.BookServiceApplicationTests" />
+      <item itemvalue="JUnit.BookServiceApplicationTests.testUpdate_Success" />
+      <item itemvalue="JUnit.LibraryServiceApplicationTests" />
+      <item itemvalue="JUnit.LibraryServiceApplicationTests.testDeleteBookById_Success" />
+      <item itemvalue="JUnit.LibraryServiceApplicationTests.testUpdateBookInfo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.BookServiceApplication" />
-        <item itemvalue="Spring Boot.LibraryServiceApplication" />
-        <item itemvalue="Spring Boot.EurikaServerApplication" />
-        <item itemvalue="Spring Boot.AuthServiceApplication" />
-        <item itemvalue="Spring Boot.AuthServiceApplication" />
+        <item itemvalue="JUnit.LibraryServiceApplicationTests.testDeleteBookById_Success" />
+        <item itemvalue="JUnit.LibraryServiceApplicationTests" />
+        <item itemvalue="JUnit.LibraryServiceApplicationTests.testUpdateBookInfo" />
+        <item itemvalue="JUnit.BookServiceApplicationTests.testUpdate_Success" />
+        <item itemvalue="JUnit.BookServiceApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -219,6 +319,10 @@
       <workItem from="1729588290046" duration="1008000" />
       <workItem from="1729591569217" duration="3047000" />
       <workItem from="1729661964415" duration="3984000" />
+      <workItem from="1730456044771" duration="3972000" />
+      <workItem from="1730485964578" duration="5348000" />
+      <workItem from="1730567571225" duration="8841000" />
+      <workItem from="1730615706879" duration="15385000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -266,12 +370,49 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="Configured microservices communication" />
     <MESSAGE value="Configured authentication via bearer token" />
     <MESSAGE value="Minor refactoring" />
     <option name="LAST_COMMIT_MESSAGE" value="Minor refactoring" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LibraryService/src/main/java/org/example/libraryservice/exceptions/LibraryExceptionHandler.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BookService/src/test/java/org/example/bookservice/BookServiceApplicationTests.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BookService/src/main/java/org/example/bookservice/mapper/BookMapper.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LibraryService/src/test/java/org/example/libraryservice/LibraryServiceApplicationTests.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Library$BookServiceApplication.ic" NAME="BookServiceApplication Coverage Results" MODIFIED="1729505013994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
